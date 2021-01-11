@@ -37,12 +37,12 @@ class BaseItem(tk.Frame):
         self.configure(bg=data)
 
 
-class TargetItem(tk.Frame):
+class HackerrankItem(tk.Frame):
     def __init__(self, container, data, *args, **kwargs):
         super().__init__(container, *args, **kwargs)
-        self.configure(width=500, height=200)
-        self.configure(bg=data)
-        self.label = tk.Label(self, text=data).place(x=10, y=30, height=100, width=100)
+        self.configure(width=300, height=60)
+        self.name = tk.Label(self, text=data.Name).place(x=10, y=5)
+        self.score = tk.Label(self, text="Score:" + data.Score).place(x=10, y=30)
 
 
 class ListView(ScrollableFrame):
